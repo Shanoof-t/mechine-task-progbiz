@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+    --color-primary: #ffbe0d;
+    --color-secondary: #000000;
+    --color-neutral: #141414;
+    --color-background: #a6a6a6;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    --font-family-sans:
+        var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --bg-hero: url("/images/hero-bg.svg");
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--font-montserrat), sans-serif;
+    background-color: var(--color-secondary);
+}
+
+.bg-hero-top {
+    background-image: var(--bg-hero);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scaleY(-1);
+}
+
+.bg-hero-bottom {
+    background-image: var(--bg-hero);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-montserrat), sans-serif;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 54px;
+}
+
+h3 {
+    font-size: 38px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+p {
+    font-size: 14px;
 }
